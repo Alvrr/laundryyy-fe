@@ -67,7 +67,7 @@ const Admin = () => {
     }  
   
     try {          
-      const response = await fetch('http://localhost:5000/add_pelanggan_dan_layanan', {          
+      const response = await fetch('https://laundryy-backend.vercel.app/add_pelanggan_dan_layanan', {          
         method: 'POST',          
         headers: {          
           'Content-Type': 'application/json'          
