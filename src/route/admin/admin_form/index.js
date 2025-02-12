@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Swal from "sweetalert2";
 import "sweetalert2/dist/sweetalert2.min.css";
 import Sidebar from '../../../components/Sidebar';
-import { getBaseUrl } from "../../config";
+import { getBaseUrl } from "../../../config";
 
 const Admin = () => {        
   const navigate = useNavigate();        
