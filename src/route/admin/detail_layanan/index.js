@@ -28,7 +28,7 @@ const DetailLayananPage = () => {
   // Fungsi untuk mengambil data layanan dari server  
   const fetchLayanan = async () => {  
     try {  
-      const response = await fetch('http://localhost:5000/layanan');  
+      const response = await fetch('https://laundryy-backend.vercel.app/layanan');  
       const data = await response.json();  
       if (response.ok) {  
         setLayananList(data.data); // Pastikan data.data sesuai dengan struktur respons  
@@ -63,7 +63,7 @@ const DetailLayananPage = () => {
   const handleUpdate = async (e) => {  
     e.preventDefault();  
     try {  
-      const response = await fetch(`http://localhost:5000/layanan/${editingLayanan}`, {  
+      const response = await fetch(`https://laundryy-backend.vercel.app/layanan/${editingLayanan}`, {  
         method: 'PUT',  
         headers: {  
           'Content-Type': 'application/json'  

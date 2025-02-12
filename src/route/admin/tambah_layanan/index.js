@@ -33,7 +33,7 @@ const TambahLayanan = () => {
         console.log('Form Data:', formData); // Tambahkan log ini  
   
         try {  
-            const response = await fetch('http://localhost:5000/layanan', {  
+            const response = await fetch('https://laundryy-backend.vercel.app/layanan', {  
                 method: 'POST',  
                 headers: {  
                     'Content-Type': 'application/json' // Menggunakan application/json  

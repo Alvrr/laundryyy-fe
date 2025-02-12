@@ -20,7 +20,7 @@ const KelolaDataTransaksi = () => {
       
   const fetchTransactions = async () => {          
     try {          
-      const response = await fetch('http://localhost:5000/transaksi');          
+      const response = await fetch('https://laundryy-backend.vercel.app/transaksi');          
       const data = await response.json();          
       if (response.ok) {          
         setTransactions(data.data.filter(transaction => transaction.status === 'Pending'));          
@@ -58,7 +58,7 @@ const KelolaDataTransaksi = () => {
     if (!confirmChange.isConfirmed) return;          
       
     try {          
-      const response = await fetch(`http://localhost:5000/transaksi/${id}`, {          
+      const response = await fetch(`https://laundryy-backend.vercel.app/transaksi/${id}`, {          
         method: 'PUT',          
         headers: {          
           'Content-Type': 'application/json',          
