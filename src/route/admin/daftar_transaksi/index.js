@@ -23,7 +23,7 @@ const DaftarTransaksi = () => {
     
   const fetchTransactions = async () => {    
     try {    
-      const response = await fetch(getBaseUrl(`/transaksi`));    
+      const response = await fetch(`https://laundryy-backend.vercel.app/transaksi`);    
       const data = await response.json();    
       if (response.ok) {    
         const completedTransactions = data.data.filter(transaction => transaction.status === 'Selesai');    
