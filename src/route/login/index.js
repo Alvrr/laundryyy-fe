@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 import "sweetalert2/dist/sweetalert2.min.css";
+import { getBaseUrl } from "../../config";
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -12,7 +13,7 @@ function Login() {
     setError(""); // Reset error message
 
     try {
-      const response = await fetch("http://localhost:5000/login", { // Pastikan URL sesuai
+      const response = await fetch(getBaseUrl(`/login`), { // Pastikan URL sesuai
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
