@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Swal from "sweetalert2";
 import "sweetalert2/dist/sweetalert2.min.css";
 import Sidebar from '../../../components/Sidebar';
+import { getBaseUrl } from "../../config";
 
 const Admin = () => {        
   const navigate = useNavigate();        
@@ -27,7 +28,7 @@ const Admin = () => {
   
   const fetchLayanan = async () => {      
     try {      
-      const response = await fetch('http://localhost:5000/layanan'); 
+      const response = await fetch(getBaseUrl(`/layanan`)); 
       const data = await response.json();      
       if (response.ok) {      
         setLayananList(data.data); 
