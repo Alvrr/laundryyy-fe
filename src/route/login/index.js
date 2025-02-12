@@ -1,15 +1,6 @@
 import React, { useState } from "react";
-import Swal from 'https://cdn.jsdelivr.net/npm/sweetalert2@11/src/sweetalert2.js';
-
-// Add CSS for SweetAlert
-const addCSSInHead = (url) => {
-  const link = document.createElement("link");
-  link.rel = "stylesheet";
-  link.href = url;
-  document.head.appendChild(link);
-};
-
-addCSSInHead("https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.css");
+import Swal from "sweetalert2";
+import "sweetalert2/dist/sweetalert2.min.css";
 
 function Login() {
   const [username, setUsername] = useState("");

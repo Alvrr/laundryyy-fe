@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";  
 import { useNavigate } from 'react-router-dom';  
-import { addCSSInHead } from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.6/element.js";
-import Swal from 'https://cdn.jsdelivr.net/npm/sweetalert2@11/src/sweetalert2.js';
+import Swal from "sweetalert2";
+import "sweetalert2/dist/sweetalert2.min.css";
 import Sidebar from '../../../components/Sidebar';
-
-await addCSSInHead("https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.css");
 
 const DetailLayananPage = () => {  
   const navigate = useNavigate();  
