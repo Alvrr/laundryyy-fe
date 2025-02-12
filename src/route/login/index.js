@@ -12,7 +12,7 @@ function Login() {
     setError(""); // Reset error message
 
     try {
-      const response = await fetch("http://localhost:5000/login", { // Pastikan URL sesuai
+      const response = await fetch("https://laundryy-backend.vercel.app/login", { // Pastikan URL sesuai
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
